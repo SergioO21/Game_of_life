@@ -1,11 +1,10 @@
 import turtle
 import random
-import copy
 
 """ Grid """
 screen = turtle.Screen()
 turtle.setup(1024, 720)
-turtle.title("Conway's Game of Life / BAR-0121")
+turtle.title("Conway's Game of Life")
 turtle.hideturtle()
 turtle.speed(0)
 turtle.tracer(0, 0)
@@ -90,35 +89,8 @@ def draw_all_life():  # draws all life
                 draw_life(i, j)  # draw live cells
 
 
-""" Life changes """
-
-
-def num_neighbors(x, y):  # computes the number of life neighbours for cell[x,y]
-    sum = 0
-    for i in range(max(x - 1, 0), min(x + 1, n - 1) + 1):
-        for j in range(max(y - 1, 0), min(y + 1, n - 1) + 1):
-            sum += life[i][j]
-    return sum - life[x][y]
-
-
-def update_life():  # update life for each cycle
-    global life
-    new_life = copy.deepcopy(life)  # make a copy of life
-    for i in range(n):
-        for j in range(n):
-            k = num_neighbors(i, j)
-            if k < 2 or k > 3:
-                new_life[i][j] = 0
-            elif k == 3:
-                new_life[i][j] = 1
-    life = copy.deepcopy(new_life)  # copy back to life
-    life_turtle.clear()  # clears life in previous cycle
-    draw_all_life()
-    screen.update()
-    screen.ontimer(update_life, 200)  # update life every 0.2 second
-
-
 draw_grid()
 init_lives()
-update_life()
+draw_all_life()
+screen.update()
 turtle.done()
