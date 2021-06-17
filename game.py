@@ -15,9 +15,9 @@ life_turtle = turtle.Turtle()  # turtle for drawing life
 life_turtle.up()
 life_turtle.hideturtle()
 life_turtle.speed(0)
-life_turtle.color('#12D209')
+life_turtle.color('#00FF74')
 
-n = 30  # nxn grid
+n = 50  # nxn grid
 
 
 def draw_line(x1, y1, x2, y2):  # this function draw a line between x1,y1 and x2,y2
@@ -28,9 +28,9 @@ def draw_line(x1, y1, x2, y2):  # this function draw a line between x1,y1 and x2
 
 
 def draw_grid():  # this function draws nxn grid
-    turtle.bgcolor("#000000")
+    turtle.bgcolor("black")
     turtle.pencolor('#000000')
-    turtle.pensize(3)
+    turtle.pensize(1)
     x = -300
     for i in range(n + 1):
         draw_line(x, -300, x, 300)
@@ -40,10 +40,6 @@ def draw_grid():  # this function draws nxn grid
         draw_line(-300, y, 300, y)
         y += 600 / n
 
-
-draw_grid()
-screen.update()
-# turtle.done()
 
 """ ------------------------ Creating lives ------------------------ """
 
@@ -115,7 +111,7 @@ def update_life():  # update life for each cycle
     life_turtle.clear()  # clears life in previous cycle
     draw_all_life()
     screen.update()
-    screen.ontimer(update_life, 200)  # update life every 0.2 second
+    screen.ontimer(update_life, 100)  # update life every 0.1 second
 
 
 draw_grid()
