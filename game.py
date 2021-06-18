@@ -2,9 +2,10 @@ import turtle
 import random
 import copy
 
-""" Grid """
+
 screen = turtle.Screen()
 turtle.setup(1024, 720)
+turtle.bgpic("wallpaper.png")
 turtle.title("Conway's Game of Life")
 turtle.hideturtle()
 turtle.speed(0)
@@ -15,35 +16,9 @@ life_turtle = turtle.Turtle()  # turtle for drawing life
 life_turtle.up()
 life_turtle.hideturtle()
 life_turtle.speed(0)
-life_turtle.color('#12D209')
 
-n = 30  # nxn grid
+n = 50  # nxn grid
 
-
-def draw_line(x1, y1, x2, y2):  # this function draw a line between x1,y1 and x2,y2
-    turtle.up()
-    turtle.goto(x1, y1)
-    turtle.down()
-    turtle.goto(x2, y2)
-
-
-def draw_grid():  # this function draws nxn grid
-    turtle.bgcolor("#000000")
-    turtle.pencolor('#000000')
-    turtle.pensize(3)
-    x = -300
-    for i in range(n + 1):
-        draw_line(x, -300, x, 300)
-        x += 600 / n
-    y = -300
-    for i in range(n + 1):
-        draw_line(-300, y, 300, y)
-        y += 600 / n
-
-
-draw_grid()
-screen.update()
-# turtle.done()
 
 """ ------------------------ Creating lives ------------------------ """
 
@@ -65,12 +40,14 @@ def init_lives():
 
 
 def draw_square(x, y, size):  # draws a filled square
+    colors = ["#4A235A", "#4A235A", "#4A235A", "#FF00FF"]
     life_turtle.up()
     life_turtle.goto(x, y)
     life_turtle.down()
     life_turtle.seth(0)
     life_turtle.begin_fill()
     for i in range(4):
+        life_turtle.color(colors[i])
         life_turtle.fd(size)
         life_turtle.left(90)
     life_turtle.end_fill()
@@ -90,7 +67,7 @@ def draw_all_life():  # draws all life
                 draw_life(i, j)  # draw live cells
 
 
-""" Life cycle """
+""" ------------------------ Life cycle ------------------------ """
 
 
 def num_neighbors(x, y):  # computes the number of life neighbours for cell[x,y]
@@ -115,10 +92,9 @@ def update_life():  # update life for each cycle
     life_turtle.clear()  # clears life in previous cycle
     draw_all_life()
     screen.update()
-    screen.ontimer(update_life, 200)  # update life every 0.2 second
+    screen.ontimer(update_life, 100)  # update life every 0.1 second
 
 
-draw_grid()
 init_lives()
 update_life()
 turtle.done()
