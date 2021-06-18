@@ -18,19 +18,19 @@ One interacts with the Game of Life by creating an initial configuration and obs
 2. Any live cell with 6 to 8 live neighbours lives on to the next generation. (stays the same color).
 3. Any live cell with more than 8 live neighbours dies, as if by over-population. 
 4. Any dead cell with 6 to 8 live neighbours becomes a live cell, as if by reproduction. (Appears and has a new color assigned to it)
+<br>
 
 ## Overview
 <div align = "center">
 <img src = "https://github.com/SergioO21/Game_of_life/blob/main/game_of_life.gif">
 </div>
+<br>
 
 ## How it Works
 <div align =  "center">
 <img src = "https://github.com/SergioO21/Game_of_life/blob/main/explain.png">
 </div>
-
-
-
+<br>
 
 
 <h2> Authors</h2>
@@ -38,5 +38,6 @@ One interacts with the Game of Life by creating an initial configuration and obs
  -  ***Sergio Orejarena*** / [Github](https://github.com/SergioO21) - [Twitter](https://twitter.com/SergioOR21) .
  - ***Duvan Rodelo*** / [Github](https://github.com/Rode1o) - [Twitter](https://twitter.com/duvanrode1o) .
  - ***Jaime Blanco*** / [Github](https://github.com/jblanco75) - [Twitter](https://twitter.com/jblanco75) .
+<br>
 
 > Finished 17 / 06 / 2021
