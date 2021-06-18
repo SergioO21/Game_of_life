@@ -40,7 +40,7 @@ def init_lives():
 
 
 def draw_square(x, y, size):  # draws a filled square
-    colors = ["#4A235A", "#4A235A", "#4A235A", "#FF00FF"]
+    colors = ["#4A235A", "#4A235A", "#4A235A", "#0FFF00"]
     life_turtle.up()
     life_turtle.goto(x, y)
     life_turtle.down()
