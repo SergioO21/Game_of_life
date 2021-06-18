@@ -1,6 +1,6 @@
 <div>
 <a href="https://github.com/SergioO21/Game_of_life">
-  <img align="right" src="https://i.gifer.com/17eq.gif" width="400" height="300"/>
+  <img align="right" src="https://github.com/SergioO21/Game_of_life/blob/main/Kirby.gif" width="400" height="200"/>
 </a>
 <a href="https://www.holbertonschool.com/">
   <img src="https://www.holbertonschool.com/holberton-logo.png"/>
@@ -9,11 +9,11 @@
 
 
 # Conway's Game of Life
-<h3>This is the sorting algorithms repository where it is stored the implementations of some sorting algorithms</h3>
+<h3>The Game of Life devised by John Horton Conway in 1970 is a zero-player game, meaning that its evolution is determined by its initial state.</h3>
 
 ****
 ## About this project
-The Game of Life devised by John Horton Conway in 1970 is a zero-player game, meaning that its evolution is determined by its initial state. One interacts with the Game of Life by creating an initial configuration and observing how it evolves, or, for advanced "players", by creating patterns with particular properties. In this example, the initial state was randomly generated. Rules have been modified for the added dimension and are: Every cell interacts with its 27 neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur: 
+One interacts with the Game of Life by creating an initial configuration and observing how it evolves, or, for advanced "players", by creating patterns with particular properties. In this example, the initial state was randomly generated. Rules have been modified for the added dimension and are: Every cell interacts with its 27 neighbours, which are the cells that are horizontally, vertically, or diagonally adjacent. At each step in time, the following transitions occur: 
 1. Any live cell with fewer than 6 live neighbours dies, as if caused by under-population. (disappears) 
 2. Any live cell with 6 to 8 live neighbours lives on to the next generation. (stays the same color).
 3. Any live cell with more than 8 live neighbours dies, as if by over-population. 
